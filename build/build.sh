@@ -16,10 +16,11 @@ function exec_command
 BOX_FILENAME=build.box
 BOX_NAME="build/mesos-ubuntu"
 
-exec_command "vagrant up --provision"
+exec_command "vagrant up --no-provision"
+exec_command "vagrant provision"
 exec_command "vagrant halt"
 exec_command "vagrant package --output $BOX_FILENAME"
 exec_command "vagrant box add $BOX_FILENAME --force --name $BOX_NAME"
 exec_command "vagrant destroy --force"
-rm ../$BOX_FILENAME
+#rm ../$BOX_FILENAME
 
