@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/ansible-mesos-playbook":{"guestpath":"/home/vagrant/ansible-mesos-playbook","hostpath":"/home/fonhorst/wspace/ansible-mesos-playbook","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/fonhorst/wspace/ansible-mesos-playbook/build","disabled":false}}}
