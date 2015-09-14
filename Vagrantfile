@@ -37,7 +37,8 @@ Vagrant.configure("2") do |config|
     config.vm.define name, primary: true do |c|
       c.vm.network "public_network", ip: ip, netmask: "255.255.0.0"
       #c.vm.box = "build/mesos-ubuntu"
-      c.vm.box = "ubuntu/trusty64"
+      #c.vm.box = "ubuntu/trusty64"
+      c.vm.box = "ubuntu-trusty-64"
       c.vm.hostname = name
       c.vm.provision "shell" do |s|
         s.inline = "apt-add-repository ppa:ansible/ansible -y; apt-get update -y; apt-get install ansible -y;"
