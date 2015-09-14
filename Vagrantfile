@@ -4,8 +4,9 @@
 Vagrant.configure("2") do |config|
   # for building we use the same files as for the regular run
   config.ssh.forward_agent = true
+  config.ssh.insert_key = false
   config.vm.synced_folder Dir.getwd, "/home/vagrant/ansible-mesos-playbook"
-
+	
   if Vagrant.has_plugin?("vagrant-proxyconf")
     config.proxy.http     = "http://proxy.ifmo.ru:3128/"
     config.proxy.no_proxy = "localhost,127.0.0.1,"
