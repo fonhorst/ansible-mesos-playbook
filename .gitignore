@@ -4,5 +4,6 @@ ansible.cfg
 hosts*
 *.bak
 .vagrant
+*.box
 
 
