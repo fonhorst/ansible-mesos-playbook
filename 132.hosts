@@ -1,3 +1,4 @@
+
 node-92-11 ansible_ssh_host=192.168.92.11 zoo_id=1 consul_bootstrap=true
 node-92-12 ansible_ssh_host=192.168.92.12 zoo_id=2
 node-92-13 ansible_ssh_host=192.168.92.13 zoo_id=3
@@ -7,6 +8,7 @@ node-92-16 ansible_ssh_host=192.168.92.16 zoo_id=6
 ####
 [mesos_masters]
 node-92-11
+node-92-17
 
 [mesos_slaves]
 node-92-12
@@ -14,9 +16,15 @@ node-92-13
 node-92-14
 node-92-15
 node-92-16
+node-92-18
+node-92-19
+node-92-20
+node-92-21
+node-92-22
 
 [mesos_primaries]
 node-92-11
+node-92-17
 
 [mesos_workers]
 node-92-12
@@ -24,3 +32,8 @@ node-92-13
 node-92-14
 node-92-15
 node-92-16
+node-92-18
+node-92-19
+node-92-20
+node-92-21
+node-92-22
