@@ -43,13 +43,13 @@ Vagrant.configure("2") do |config|
         s.inline = "apt-add-repository ppa:ansible/ansible -y; apt-get update -y; apt-get install ansible -y;"
         s.privileged = true
       end
-      c.vm.provider }:virtualbox do |vb|
+      c.vm.provider :virtualbox do |vb|
 	#vb.customize ["modifyvm", :id, "--memory", 8129]
 	#vb.customize ["modifyvm", :id, "--cpus", "2"]
       	vb.memory = 8192
 	vb.cpus = 2
       end
-      c.vm.synced_folder "hdfs_data/data_#{name}", "/hdfs_data", create: true; mount_options: ["dmode=777,fmode=777"]
+      c.vm.synced_folder "hdfs_data/data_#{name}", "/hdfs_data", create: true, mount_options: ["dmode=777,fmode=777"]
       #c.vm.provision "ansible" do |ansible|
       #    ansible.playbook = "playbook.yml"
       #    ansible.inventory_path="hosts"
