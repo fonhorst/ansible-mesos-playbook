@@ -40,10 +40,18 @@ GIT
   specs:
     ansible-zookeeper (0.0.0)
 
+GIT
+  remote: https://github.com/retr0h/ansible-logrotate
+  ref: master
+  sha: 71bf6272db8fda75fc175e1a28f07b5e172e5b58
+  specs:
+    ansible-logrotate (0.0.0)
+
 DEPENDENCIES
   ansible-consul (>= 0)
   ansible-docker (>= 0)
   ansible-java8 (>= 0)
+  ansible-logrotate (>= 0)
   ansible-marathon (>= 0)
   ansible-mesos (>= 0)
   ansible-zookeeper (>= 0)

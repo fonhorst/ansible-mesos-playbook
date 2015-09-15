@@ -15,3 +15,5 @@ role "ansible-mesos",
   github: "mhamrah/ansible-mesos"
 role "ansible-consul",
   github: "mhamrah/ansible-consul"
+role "ansible-logrotate",
+  github: "retr0h/ansible-logrotate"
