@@ -38,10 +38,12 @@ Vagrant.configure("2") do |config|
       c.vm.network "public_network", ip: ip, netmask: "255.255.0.0"
       #c.vm.box = "build/mesos-ubuntu"
       #c.vm.box = "ubuntu/trusty64"
-      c.vm.box = "ubuntu-trusty-64"
+      c.vm.box = "ubuntu-trusty64"
       c.vm.hostname = name
       c.vm.provision "shell" do |s|
-        s.inline = "apt-add-repository ppa:ansible/ansible -y; apt-get update -y; apt-get install ansible -y;"
+        dns_server = "if ! grep -q \'nameserver 192.168.13.132\' /etc/resolvconf/resolv.conf.d/head; then echo 'nameserver 192.168.13.132'|tee --append /etc/resolvconf/resolv.conf.d/head; fi;resolvconf -u;"
+	#dns_server = ""
+	s.inline = "#{dns_server}apt-add-repository ppa:ansible/ansible -y; apt-get update -y; apt-get install ansible -y;"
         s.privileged = true
       end
       c.vm.provider :virtualbox do |vb|
