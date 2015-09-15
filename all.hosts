@@ -14,10 +14,10 @@ node-92-22 ansible_ssh_host=192.168.92.22 zoo_id=12
 ####
 [mesos_masters]
 node-92-11
+node-92-12
 node-92-17
 
 [mesos_slaves]
-node-92-12
 node-92-13
 node-92-14
 node-92-15
@@ -30,10 +30,10 @@ node-92-22
 
 [mesos_primaries]
 node-92-11
+node-92-12
 node-92-17
 
 [mesos_workers]
-node-92-12
 node-92-13
 node-92-14
 node-92-15
